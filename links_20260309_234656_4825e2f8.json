@@ -1,0 +1,80 @@
+[
+  {
+    "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-operationalizing-agentic-ai/introduction.html",
+    "label": "Recommendations",
+    "aria_label": "Recommendations (opens in a new tab)",
+    "description": "Operationalizing agentic AI on AWS"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-multitenant/introduction.html",
+    "label": "Multi-tenant",
+    "aria_label": "Multi-tenant  (opens in a new tab)",
+    "description": "Building multi-tenant architectures for agentic AI on AWS"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-serverless/introduction.html",
+    "label": "Serverless",
+    "aria_label": "Serverless (opens in a new tab)",
+    "description": "Building serverless architectures for agentic AI on AWS"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-patterns/introduction.html",
+    "label": "Guidance",
+    "aria_label": "Guidance (opens in a new tab)",
+    "description": "Agentic AI patterns and workflows on AWS"
+  },
+  {
+    "url": "https://github.com/strands-agents/samples/tree/main/05-agentic-rag",
+    "label": "Github",
+    "aria_label": "Github (opens in a new tab)",
+    "description": "Agentic RAG Implementation Samples"
+  },
+  {
+    "url": "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/03-graph-agent",
+    "label": "Graph Agent",
+    "aria_label": "Graph Agent (opens in a new tab)",
+    "description": "Graph agent"
+  },
+  {
+    "url": "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/02-swarm-agent",
+    "label": "Swarm Agent",
+    "aria_label": "Swarm Agent (opens in a new tab)",
+    "description": "Swarm agent"
+  },
+  {
+    "url": "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/01-agent-as-tool",
+    "label": "Agent-as-tool",
+    "aria_label": "Agent-as-tool (opens in a new tab)",
+    "description": "Agent-as-tool"
+  },
+  {
+    "url": "https://github.com/strands-agents/samples/tree/main/02-samples",
+    "label": "Strands SDK",
+    "aria_label": "Strands SDK (opens in a new tab)",
+    "description": "Agentic Pattern Samples Repository"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/02-use-cases",
+    "label": "Bedrock AgentCore",
+    "aria_label": "Bedrock AgentCore (opens in a new tab)",
+    "description": "Bedrock AgentCore Agentic Patterns Repo"
+  },
+  {
+    "url": "https://builder.aws.com/content/30YXzNzo7AKLBHMwfs1hI4Ckm6S/the-agentic-ai-revolution-transforming-enterprise-business-processes-with-aws-and-global-strategic-partners",
+    "label": "Blog",
+    "aria_label": "Blog (opens in a new tab)",
+    "description": "Transforming Enterprise Business Processes with AWS and Global Strategic Partners"
+  },
+  {
+    "url": "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-agentic-ai",
+    "label": "Blog",
+    "aria_label": "Blog (opens in a new tab)",
+    "description": "Amazon introduces agentic AI across the seller experience, transforming how sellers manage their businesses"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-agentic-workflows-with-openai-gpt-oss-on-amazon-sagemaker-ai-and-amazon-bedrock-agentcore/",
+    "label": "Blog",
+    "aria_label": "Blog (opens in a new tab)",
+    "description": "Build Agentic Workflows with OpenAI GPT OSS on Amazon Bedrock AgentCore"
+  }
+]

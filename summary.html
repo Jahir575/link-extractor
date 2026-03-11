@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Agentic AI & Bedrock Documentation Hub</title>
+    <style>
+        :root {
+            --aws-orange: #FF9900;
+            --aws-dark: #232F3E;
+            --aws-light: #37475A;
+            --bg: #0f1117;
+            --card-bg: #1a1d27;
+            --card-hover: #22263a;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #2d3348;
+            --accent-blue: #60a5fa;
+            --accent-green: #34d399;
+            --accent-purple: #a78bfa;
+            --accent-pink: #f472b6;
+            --accent-yellow: #fbbf24;
+            --accent-red: #f87171;
+            --accent-teal: #2dd4bf;
+            --accent-indigo: #818cf8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--aws-dark) 0%, #1a1a2e 50%, #16213e 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--aws-orange);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,153,0,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(96,165,250,0.08) 0%, transparent 50%);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .hero h1 span { color: var(--aws-orange); }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--aws-orange);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .controls {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 17, 23, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.6rem 1rem 0.6rem 2.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-box input:focus { border-color: var(--aws-orange); }
+
+        .search-box::before {
+            content: '🔍';
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+        }
+
+        .filter-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.82rem;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .pill:hover { border-color: var(--aws-orange); color: var(--text); }
+        .pill.active { background: var(--aws-orange); color: var(--aws-dark); border-color: var(--aws-orange); font-weight: 600; }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .category-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .category-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .category-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: var(--card-bg);
+            padding: 0.15rem 0.6rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .toggle-arrow {
+            margin-left: auto;
+            color: var(--text-muted);
+            transition: transform 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .toggle-arrow.collapsed { transform: rotate(-90deg); }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1rem;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s;
+        }
+
+        .cards-grid.collapsed { max-height: 0; opacity: 0; pointer-events: none; }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.2rem;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 3px;
+            height: 100%;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .card:hover {
+            border-color: rgba(255,153,0,0.4);
+            background: var(--card-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            width: fit-content;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.8rem;
+            flex: 1;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--aws-orange);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: gap 0.2s;
+        }
+
+        .card-link:hover { gap: 0.7rem; }
+
+        /* Category-specific colors */
+        .cat-docs .card::before { background: var(--accent-blue); }
+        .cat-docs .card-tag { background: rgba(96,165,250,0.15); color: var(--accent-blue); }
+        .cat-docs .category-icon { background: rgba(96,165,250,0.15); }
+
+        .cat-github .card::before { background: var(--accent-green); }
+        .cat-github .card-tag { background: rgba(52,211,153,0.15); color: var(--accent-green); }
+        .cat-github .category-icon { background: rgba(52,211,153,0.15); }
+
+        .cat-blogs .card::before { background: var(--accent-purple); }
+        .cat-blogs .card-tag { background: rgba(167,139,250,0.15); color: var(--accent-purple); }
+        .cat-blogs .category-icon { background: rgba(167,139,250,0.15); }
+
+        .cat-protocols .card::before { background: var(--accent-pink); }
+        .cat-protocols .card-tag { background: rgba(244,114,182,0.15); color: var(--accent-pink); }
+        .cat-protocols .category-icon { background: rgba(244,114,182,0.15); }
+
+        .cat-workshops .card::before { background: var(--accent-yellow); }
+        .cat-workshops .card-tag { background: rgba(251,191,36,0.15); color: var(--accent-yellow); }
+        .cat-workshops .category-icon { background: rgba(251,191,36,0.15); }
+
+        .cat-product .card::before { background: var(--accent-teal); }
+        .cat-product .card-tag { background: rgba(45,212,191,0.15); color: var(--accent-teal); }
+        .cat-product .category-icon { background: rgba(45,212,191,0.15); }
+
+        .cat-security .card::before { background: var(--accent-red); }
+        .cat-security .card-tag { background: rgba(248,113,113,0.15); color: var(--accent-red); }
+        .cat-security .category-icon { background: rgba(248,113,113,0.15); }
+
+        .cat-bedrock .card::before { background: var(--accent-indigo); }
+        .cat-bedrock .card-tag { background: rgba(129,140,248,0.15); color: var(--accent-indigo); }
+        .cat-bedrock .category-icon { background: rgba(129,140,248,0.15); }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            display: none;
+        }
+
+        .no-results.visible { display: block; }
+
+        .toc {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc h3 {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            color: var(--aws-orange);
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.6rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .toc-item:hover { background: rgba(255,153,0,0.1); color: var(--text); }
+
+        .toc-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.5rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+            .controls { flex-direction: column; }
+            .container { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🤖 <span>AWS Agentic AI</span> & Bedrock Documentation Hub</h1>
+        <p>Comprehensive resource guide for building production-ready AI agents on AWS</p>
+        <div class="stats-bar">
+            <div class="stat"><div class="stat-num" id="totalLinks">0</div><div class="stat-label">Resources</div></div>
+            <div class="stat"><div class="stat-num" id="totalCats">0</div><div class="stat-label">Categories</div></div>
+            <div class="stat"><div class="stat-num" id="totalGithub">0</div><div class="stat-label">Code Samples</div></div>
+            <div class="stat"><div class="stat-num" id="totalDocs">0</div><div class="stat-label">Guides</div></div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search resources... (e.g. MCP, guardrails, memory, strands)">
+        </div>
+        <div class="filter-pills" id="filterPills"></div>
+    </div>
+
+    <div class="container">
+        <div class="toc" id="toc">
+            <h3>📑 Quick Navigation</h3>
+            <div class="toc-grid" id="tocGrid"></div>
+        </div>
+        <div id="content"></div>
+        <div class="no-results" id="noResults">
+            <p style="font-size:2rem;margin-bottom:0.5rem;">🔍</p>
+            <p>No resources match your search. Try different keywords.</p>
+        </div>
+    </div>
+
+    <footer>
+        Generated from AWS documentation links &bull; Last updated: March 2026
+    </footer>
+
+    <script>
+const DATA = {
+    "Documentation": {
+        icon: "📘", css: "cat-docs", tag: "Docs",
+        items: [
+            { title: "Amazon Bedrock AgentCore Developer Guide", desc: "Comprehensive developer guide for AgentCore — the managed infrastructure for deploying, scaling, and operating AI agents.", url: "https://docs.aws.amazon.com/bedrock-agentcore/" },
+            { title: "What is Amazon Bedrock AgentCore?", desc: "Overview of AgentCore capabilities: Runtime, Gateway, Memory, Identity, Observability, and Code Interpreter.", url: "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html" },
+            { title: "Getting Started — Starter Toolkit", desc: "Step-by-step tutorial to deploy your first agent using the AgentCore Starter Toolkit CLI.", url: "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/getting-started-starter-toolkit.html" },
+            { title: "Getting Started — Custom Setup", desc: "Getting started without the starter toolkit for more control over your agent deployment.", url: "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/getting-started-custom.html" },
+            { title: "AgentCore Runtime", desc: "Host agents or tools with managed compute, auto-scaling, and built-in security.", url: "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html" },
+            { title: "AgentCore Memory Guide", desc: "Add persistent memory to agents — session context, user preferences, and long-term knowledge.", url: "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-getting-started.html" },
+            { title: "AgentCore Observability", desc: "Monitor, trace, and debug agent behavior with built-in observability tooling.", url: "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html" },
+            { title: "Agentic AI Frameworks on AWS", desc: "AWS Prescriptive Guidance comparing frameworks: Strands, LangGraph, CrewAI, AutoGen, ADK, and more.", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/introduction.html" },
+            { title: "Framework Comparison", desc: "Detailed comparison of agentic AI frameworks and their strengths for different use cases.", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/frameworks.html" },
+            { title: "Agentic AI Patterns & Workflows", desc: "Common patterns: ReAct, Plan-and-Execute, multi-agent orchestration, tool use, and RAG.", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-patterns/introduction.html" },
+            { title: "Operationalizing Agentic AI", desc: "Strategy guide for taking agentic AI from prototype to production at enterprise scale.", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-operationalizing-agentic-ai/introduction.html" },
+            { title: "Multi-Tenant Agentic AI", desc: "Architecture patterns for building multi-tenant agentic AI systems on AWS.", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-multitenant/introduction.html" },
+            { title: "Serverless Agentic AI", desc: "Building serverless architectures for agentic AI workloads on AWS.", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-serverless/introduction.html" },
+            { title: "Agent-to-Agent Protocols Guidance", desc: "AWS prescriptive guidance on A2A protocol for inter-agent communication.", url: "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/agent-to-agent-protocols.html" },
+            { title: "Strands Agents Documentation", desc: "Official docs for Strands — AWS's open-source SDK for building AI agents with tool use and multi-agent patterns.", url: "https://strandsagents.com/latest/" },
+            { title: "Strands: A2A Protocol Support", desc: "Guide to implementing Agent-to-Agent communication using the Strands SDK.", url: "https://strandsagents.com/latest/documentation/docs/user-guide/concepts/multi-agent/agent-to-agent/" },
+            { title: "Strands: Guardrails", desc: "Implementing safety guardrails and content filtering in Strands agents.", url: "https://strandsagents.com/latest/documentation/docs/user-guide/safety-security/guardrails/" },
+            { title: "Amazon Bedrock Guardrails", desc: "Configure content filters, denied topics, PII redaction, and safety policies for AI models.", url: "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html" },
+            { title: "AI Agents on AWS Marketplace", desc: "How to list and discover AI agents and tools on AWS Marketplace.", url: "https://docs.aws.amazon.com/marketplace/latest/userguide/ai-agents-tools.html" }
+        ]
+    },
+    "GitHub & Samples": {
+        icon: "💻", css: "cat-github", tag: "Code",
+        items: [
+            { title: "AgentCore Samples Repository", desc: "Main repo with tutorials, integrations, and use-case samples for Amazon Bedrock AgentCore.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples" },
+            { title: "AgentCore Starter Toolkit CLI", desc: "CLI tool to scaffold, deploy, and manage agents on AgentCore in minutes.", url: "https://github.com/aws/bedrock-agentcore-starter-toolkit" },
+            { title: "QuickStart: First Agent in 5 Minutes", desc: "Minimal walkthrough to get a working agent deployed on AgentCore Runtime.", url: "https://aws.github.io/bedrock-agentcore-starter-toolkit/user-guide/runtime/quickstart.html" },
+            { title: "Strands Agents on AgentCore", desc: "Integration sample: deploy Strands-based agents on AgentCore Runtime.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/strands-agents" },
+            { title: "ADK on AgentCore", desc: "Google's Agent Development Kit running on Amazon Bedrock AgentCore.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/adk" },
+            { title: "CrewAI on AgentCore", desc: "CrewAI multi-agent framework integrated with Bedrock models on AgentCore.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/01-AgentCore-runtime/01-hosting-agent/04-crewai-with-bedrock-model" },
+            { title: "AutoGen on AgentCore", desc: "Microsoft AutoGen framework running on AgentCore infrastructure.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/autogen" },
+            { title: "LangGraph on AgentCore", desc: "LangChain's LangGraph stateful agent framework on AgentCore.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/langgraph" },
+            { title: "AgentCore Gateway Samples", desc: "Tutorials for API Gateway integration, auth, and routing for agents.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/02-AgentCore-gateway" },
+            { title: "Healthcare Appointment Agent", desc: "Reference architecture: healthcare scheduling agent using AgentCore Gateway.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/02-use-cases/healthcare-appointment-agent" },
+            { title: "Gateway Starter Toolkit Source", desc: "Source code for gateway operations in the AgentCore Starter Toolkit.", url: "https://github.com/aws/bedrock-agentcore-starter-toolkit/tree/main/src/bedrock_agentcore_starter_toolkit/operations/gateway" },
+            { title: "AgentCore Memory Tutorial", desc: "Hands-on tutorial for adding persistent memory to your agents.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/04-AgentCore-memory" },
+            { title: "Memory API Reference", desc: "API reference for AgentCore Memory service.", url: "https://aws.github.io/bedrock-agentcore-starter-toolkit/api-reference/memory.html" },
+            { title: "AgentCore Observability Samples", desc: "Sample code for tracing, logging, and monitoring agents.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/06-AgentCore-observability" },
+            { title: "Strands Agents — Python SDK", desc: "Core Python SDK for building Strands agents with tool use and orchestration.", url: "https://github.com/strands-agents/sdk-python" },
+            { title: "Strands Agents — Samples", desc: "Collection of sample agents and patterns built with Strands SDK.", url: "https://github.com/strands-agents/samples" },
+            { title: "Strands Agents — Tools", desc: "Pre-built tools for Strands agents: web search, file I/O, code execution, and more.", url: "https://github.com/strands-agents/tools" },
+            { title: "Strands Agents — Docs Source", desc: "Source repository for Strands Agents documentation.", url: "https://github.com/strands-agents/docs" },
+            { title: "Agentic RAG Samples", desc: "Retrieval-Augmented Generation patterns with agentic orchestration.", url: "https://github.com/strands-agents/samples/tree/main/05-agentic-rag" },
+            { title: "Multi-Agent: Graph Agent", desc: "Graph-based multi-agent orchestration pattern sample.", url: "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/03-graph-agent" },
+            { title: "Multi-Agent: Swarm Agent", desc: "Swarm-style multi-agent coordination pattern sample.", url: "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/02-swarm-agent" },
+            { title: "Multi-Agent: Agent-as-Tool", desc: "Pattern where one agent uses another agent as a callable tool.", url: "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/01-agent-as-tool" },
+            { title: "Agentic Pattern Samples", desc: "Collection of common agentic patterns implemented with Strands SDK.", url: "https://github.com/strands-agents/samples/tree/main/02-samples" },
+            { title: "AgentCore Use Cases", desc: "End-to-end use case implementations on Bedrock AgentCore.", url: "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/02-use-cases" },
+            { title: "A2A Native Support (Strands)", desc: "Building Agent-to-Agent communication with native Strands SDK support.", url: "https://github.com/strands-agents/samples/tree/main/03-integrations/Native-A2A-Support" },
+            { title: "Responsible AI Samples", desc: "Sample implementations for responsible AI practices with Bedrock.", url: "https://github.com/aws-samples/amazon-bedrock-samples/tree/main/responsible_ai" },
+            { title: "Sample Agentic Frameworks on AWS", desc: "Curated collection of agentic framework examples and blog references.", url: "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/tree/main" }
+        ]
+    },
+    "Blogs & Articles": {
+        icon: "📝", css: "cat-blogs", tag: "Blog",
+        items: [
+            { title: "Introducing Amazon Bedrock AgentCore", desc: "Launch announcement: securely deploy and operate AI agents at any scale with AgentCore.", url: "https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-agentcore-securely-deploy-and-operate-ai-agents-at-any-scale/" },
+            { title: "Production-Ready AI Agents at Scale", desc: "How AWS enables customers to move from prototype to production-grade agentic AI.", url: "https://aws.amazon.com/blogs/machine-learning/enabling-customers-to-deliver-production-ready-ai-agents-at-scale/" },
+            { title: "From PoC to Production with AgentCore", desc: "Practical guide for moving AI agents from proof-of-concept to production deployment.", url: "https://aws.amazon.com/blogs/machine-learning/move-your-ai-agents-from-proof-of-concept-to-production-with-amazon-bedrock-agentcore/" },
+            { title: "Introducing AgentCore Gateway", desc: "Deep dive into Gateway: API management, auth, and tool connectivity for agents.", url: "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-agentcore-gateway-transforming-enterprise-ai-agent-tool-development/" },
+            { title: "AgentCore Memory: Context-Aware Agents", desc: "Building agents that remember context across sessions using AgentCore Memory.", url: "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/" },
+            { title: "Trustworthy Agents with Observability", desc: "Using AgentCore Observability to build reliable, debuggable AI agents.", url: "https://aws.amazon.com/blogs/machine-learning/build-trustworthy-ai-agents-with-amazon-bedrock-agentcore-observability/" },
+            { title: "Agentic Workflows with OpenAI GPT on AgentCore", desc: "Build agentic workflows using OpenAI GPT models on SageMaker AI and AgentCore.", url: "https://aws.amazon.com/blogs/machine-learning/build-agentic-workflows-with-openai-gpt-oss-on-amazon-sagemaker-ai-and-amazon-bedrock-agentcore/" },
+            { title: "Agentic AI Revolution for Enterprise", desc: "How AWS and partners are transforming enterprise business processes with agentic AI.", url: "https://builder.aws.com/content/30YXzNzo7AKLBHMwfs1hI4Ckm6S/the-agentic-ai-revolution-transforming-enterprise-business-processes-with-aws-and-global-strategic-partners" },
+            { title: "Amazon Seller Assistant — Agentic AI", desc: "How Amazon uses agentic AI to enhance the seller experience.", url: "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-agentic-ai" }
+        ]
+    },
+    "Protocols (MCP & A2A)": {
+        icon: "🔗", css: "cat-protocols", tag: "Protocol",
+        items: [
+            { title: "Inter-Agent Communication on MCP", desc: "Open protocols for agent interoperability — Part 1: Model Context Protocol.", url: "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-1-inter-agent-communication-on-mcp/" },
+            { title: "MCP on AWS — Unlocking the Power", desc: "Deep dive into deploying and using Model Context Protocol on AWS infrastructure.", url: "https://aws.amazon.com/blogs/machine-learning/unlocking-the-power-of-model-context-protocol-mcp-on-aws/" },
+            { title: "MCP Desktop Client with Bedrock", desc: "Run an MCP desktop client using Amazon Bedrock for agentic AI workflows.", url: "https://builder.aws.com/content/2vPB0cvCY08EWYleQ8vcMCOvQVg/run-mcp-desktop-client-using-amazon-bedrock-for-agenticai" },
+            { title: "Deploying MCP Servers on AWS", desc: "AWS Solutions guidance for deploying Model Context Protocol servers.", url: "https://aws.amazon.com/solutions/guidance/deploying-model-context-protocol-servers-on-aws/" },
+            { title: "MCP Agents on AWS — Getting Started", desc: "Community guide: running MCP-based agents, clients, and servers on AWS.", url: "https://community.aws/content/2v8AETAkyvPp9RVKC4YChncaEbs/running-mcp-based-agents-clients-servers-on-aws" },
+            { title: "MCP HR Agent Sample (Spring AI)", desc: "Sample: MCP-enabled HR agent using Spring AI on ECS.", url: "https://github.com/aws-samples/Sample-Model-Context-Protocol-Demos/tree/main/modules/spring-ai-mcp-inter-agent-ecs" },
+            { title: "AWS MCP Server Projects (OSS)", desc: "Open-source MCP server implementations from AWS Labs.", url: "https://github.com/awslabs/mcp" },
+            { title: "MCP Integration with Bedrock Agents", desc: "Harness MCP servers directly within Amazon Bedrock Agents.", url: "https://aws.amazon.com/blogs/machine-learning/harness-the-power-of-mcp-servers-with-amazon-bedrock-agents/" },
+            { title: "Inter-Agent Communication on A2A", desc: "Open protocols for agent interoperability — Part 4: Agent-to-Agent protocol.", url: "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-4-inter-agent-communication-on-a2a/" },
+            { title: "A2A Advisory Trading — Dev Guide", desc: "Development guide for the A2A advisory trading sample application.", url: "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/blob/main/a2a-protocol/a2a-advisory-trading/docs/main/development_guide.md" },
+            { title: "A2A Advisory Trading — Deployment", desc: "Deployment guide for the A2A advisory trading sample on AWS.", url: "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/blob/main/a2a-protocol/a2a-advisory-trading/docs/main/solution_deployment.md" },
+            { title: "AG-UI Protocol", desc: "Agent-User Interface protocol for building interactive agent frontends.", url: "https://github.com/ag-ui-protocol/ag-ui" },
+            { title: "AG-UI Dojo — LangGraph + FastAPI", desc: "Interactive playground for AG-UI with agentic chat and reasoning.", url: "https://dojo.ag-ui.com/langgraph-fastapi/feature/agentic_chat_reasoning" }
+        ]
+    },
+    "Workshops & Tutorials": {
+        icon: "🎓", css: "cat-workshops", tag: "Workshop",
+        items: [
+            { title: "MCP-Enabled Strands Agents Workshop", desc: "Hands-on workshop: build MCP-enabled agents using Strands SDK on Bedrock.", url: "https://catalog.us-east-1.prod.workshops.aws/workshops/fda82638-2464-49f9-b6af-0e72b157d1a9/en-US" },
+            { title: "AgentCore Observability Workshop", desc: "Workshop on implementing observability for your AgentCore-deployed agents.", url: "https://catalog.us-east-1.prod.workshops.aws/workshops/015a2de4-9522-4532-b2eb-639280dc31d8/en-US" }
+        ]
+    },
+    "Product Pages": {
+        icon: "🏠", css: "cat-product", tag: "Product",
+        items: [
+            { title: "Amazon Bedrock AgentCore — Overview", desc: "Product page: features, pricing, and capabilities of AgentCore.", url: "https://aws.amazon.com/bedrock/agentcore/" },
+            { title: "AgentCore FAQ", desc: "Frequently asked questions about Amazon Bedrock AgentCore.", url: "https://aws.amazon.com/bedrock/agentcore/faqs/" },
+            { title: "Amazon Bedrock Guardrails", desc: "Product page for Bedrock Guardrails: content filtering, PII protection, and safety.", url: "https://aws.amazon.com/bedrock/guardrails/" }
+        ]
+    },
+    "Security & Guardrails": {
+        icon: "🛡️", css: "cat-security", tag: "Security",
+        items: [
+            { title: "Securing Generative AI on AWS", desc: "Best practices and tools for securing generative AI workloads.", url: "https://aws.amazon.com/ai/generative-ai/security/" },
+            { title: "AWS Cloud Security", desc: "Overview of AWS security services, compliance, and shared responsibility model.", url: "https://aws.amazon.com/security/" },
+            { title: "AWS Trust Center", desc: "Transparency hub for AWS security, privacy, and compliance information.", url: "https://aws.amazon.com/trust-center/" }
+        ]
+    },
+    "Bedrock & Nova Models": {
+        icon: "🧠", css: "cat-bedrock", tag: "Model",
+        items: [
+            { title: "Amazon Nova User Guide", desc: "Official guide for Amazon Nova foundation models — text, multimodal, and creative.", url: "https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html" },
+            { title: "Amazon Nova Samples", desc: "GitHub repo with code samples for Nova models.", url: "https://github.com/aws-samples/amazon-nova-samples" },
+            { title: "Amazon Nova Act SDK", desc: "SDK for Nova Act — agentic browser automation and web interaction.", url: "https://github.com/aws/nova-act" },
+            { title: "Nova Multimodal Workshop", desc: "Workshop: multimodal understanding with Amazon Nova models.", url: "https://catalog.us-east-1.prod.workshops.aws/workshops/012d9c20-25dc-4065-bdb6-50e935e8bd9f/en-US" },
+            { title: "Nova Canvas & Reel Workshop", desc: "Creative workshop: image generation with Nova Canvas and video with Nova Reel.", url: "https://catalog.us-east-1.prod.workshops.aws/workshops/66a0984a-ad2b-481f-a1cf-e7896ea9595b/en-US" },
+            { title: "Nova Sonic Workshop", desc: "Workshop: speech-to-speech capabilities with Amazon Nova Sonic.", url: "https://catalog.us-east-1.prod.workshops.aws/workshops/5238419f-1337-4e0f-8cd7-02239486c40d/en-US" },
+            { title: "Bedrock Model Evaluation", desc: "Evaluate models or RAG systems using Amazon Bedrock Evaluations.", url: "https://aws.amazon.com/blogs/machine-learning/evaluate-models-or-rag-systems-using-amazon-bedrock-evaluations-now-generally-available/" },
+            { title: "LLM-as-a-Judge on Bedrock", desc: "Use LLM-as-a-judge methodology for automated model evaluation.", url: "https://aws.amazon.com/blogs/machine-learning/llm-as-a-judge-on-amazon-bedrock-model-evaluation/" },
+            { title: "Custom Metrics for Evaluation", desc: "Define custom evaluation metrics for your generative AI applications.", url: "https://aws.amazon.com/blogs/machine-learning/use-custom-metrics-to-evaluate-your-generative-ai-application-with-amazon-bedrock/" },
+            { title: "Fine-Tune Claude 3 Haiku", desc: "Fine-tune Anthropic's Claude 3 Haiku in Bedrock for improved accuracy.", url: "https://aws.amazon.com/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/" },
+            { title: "Fine-Tuning Models in Bedrock (Video)", desc: "Video demo of fine-tuning workflows in Amazon Bedrock.", url: "https://aws.amazon.com/awstv/watch/92a3fa57f74/" },
+            { title: "Bedrock Model Distillation", desc: "Guide to distilling larger models into smaller, efficient ones on Bedrock.", url: "https://aws.amazon.com/blogs/machine-learning/a-guide-to-amazon-bedrock-model-distillation-preview/" },
+            { title: "Import Custom Models to Bedrock", desc: "Import fine-tuned question-answering models into Bedrock as custom models.", url: "https://aws.amazon.com/blogs/machine-learning/import-a-question-answering-fine-tuned-model-into-amazon-bedrock-as-a-custom-model/" }
+        ]
+    }
+};
+
+// Build UI
+const content = document.getElementById('content');
+const filterPills = document.getElementById('filterPills');
+const tocGrid = document.getElementById('tocGrid');
+const searchInput = document.getElementById('searchInput');
+const noResults = document.getElementById('noResults');
+
+// Stats
+let totalLinks = 0, totalGithub = 0, totalDocs = 0;
+const cats = Object.keys(DATA);
+cats.forEach(cat => {
+    totalLinks += DATA[cat].items.length;
+    if (cat.includes('GitHub')) totalGithub += DATA[cat].items.length;
+    if (cat === 'Documentation') totalDocs += DATA[cat].items.length;
+});
+document.getElementById('totalLinks').textContent = totalLinks;
+document.getElementById('totalCats').textContent = cats.length;
+document.getElementById('totalGithub').textContent = totalGithub;
+document.getElementById('totalDocs').textContent = totalDocs;
+
+// Filter pills
+const allPill = document.createElement('button');
+allPill.className = 'pill active';
+allPill.textContent = 'All';
+allPill.dataset.cat = 'all';
+filterPills.appendChild(allPill);
+
+cats.forEach(cat => {
+    const pill = document.createElement('button');
+    pill.className = 'pill';
+    pill.textContent = cat;
+    pill.dataset.cat = cat;
+    filterPills.appendChild(pill);
+});
+
+// TOC
+const tocColors = { 'cat-docs':'#60a5fa','cat-github':'#34d399','cat-blogs':'#a78bfa','cat-protocols':'#f472b6','cat-workshops':'#fbbf24','cat-product':'#2dd4bf','cat-security':'#f87171','cat-bedrock':'#818cf8' };
+cats.forEach(cat => {
+    const d = DATA[cat];
+    const item = document.createElement('div');
+    item.className = 'toc-item';
+    item.innerHTML = `<span class="toc-dot" style="background:${tocColors[d.css]}"></span>${d.icon} ${cat} <span style="color:var(--text-muted);font-size:0.75rem">(${d.items.length})</span>`;
+    item.onclick = () => {
+        const el = document.getElementById('section-' + d.css);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    tocGrid.appendChild(item);
+});
+
+// Render categories
+function renderAll() {
+    content.innerHTML = '';
+    cats.forEach(cat => {
+        const d = DATA[cat];
+        const section = document.createElement('div');
+        section.className = `category-section ${d.css}`;
+        section.id = 'section-' + d.css;
+
+        const header = document.createElement('div');
+        header.className = 'category-header';
+        header.innerHTML = `
+            <div class="category-icon">${d.icon}</div>
+            <span class="category-title">${cat}</span>
+            <span class="category-count">${d.items.length} resources</span>
+            <span class="toggle-arrow">▼</span>
+        `;
+
+        const grid = document.createElement('div');
+        grid.className = 'cards-grid';
+
+        d.items.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.dataset.search = `${item.title} ${item.desc} ${cat}`.toLowerCase();
+            card.innerHTML = `
+                <span class="card-tag">${d.tag}</span>
+                <div class="card-title">${item.title}</div>
+                <div class="card-desc">${item.desc}</div>
+                <a class="card-link" href="${item.url}" target="_blank" rel="noopener">Open resource →</a>
+            `;
+            grid.appendChild(card);
+        });
+
+        header.onclick = () => {
+            grid.classList.toggle('collapsed');
+            header.querySelector('.toggle-arrow').classList.toggle('collapsed');
+        };
+
+        section.appendChild(header);
+        section.appendChild(grid);
+        content.appendChild(section);
+    });
+}
+
+renderAll();
+
+// Search
+searchInput.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase().trim();
+    let anyVisible = false;
+
+    document.querySelectorAll('.category-section').forEach(section => {
+        let sectionVisible = false;
+        section.querySelectorAll('.card').forEach(card => {
+            const match = !q || card.dataset.search.includes(q);
+            card.style.display = match ? '' : 'none';
+            if (match) { sectionVisible = true; anyVisible = true; }
+        });
+        section.style.display = sectionVisible ? '' : 'none';
+        // Expand sections when searching
+        if (q && sectionVisible) {
+            section.querySelector('.cards-grid').classList.remove('collapsed');
+            section.querySelector('.toggle-arrow').classList.remove('collapsed');
+        }
+    });
+
+    noResults.classList.toggle('visible', !anyVisible);
+});
+
+// Filter pills
+filterPills.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('pill')) return;
+    filterPills.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    e.target.classList.add('active');
+
+    const cat = e.target.dataset.cat;
+    document.querySelectorAll('.category-section').forEach(section => {
+        if (cat === 'all') {
+            section.style.display = '';
+        } else {
+            const sectionCat = section.querySelector('.category-title').textContent;
+            section.style.display = sectionCat === cat ? '' : 'none';
+        }
+    });
+
+    searchInput.value = '';
+    noResults.classList.remove('visible');
+});
+    </script>
+</body>
+</html>

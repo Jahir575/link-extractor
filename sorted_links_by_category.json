@@ -1,0 +1,406 @@
+{
+    "Documentation": [
+        {
+            "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/frameworks.html",
+            "label": "Frameworks",
+            "description": "Agentic AI frameworks"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/introduction.html",
+            "label": "Documentation",
+            "description": "AWS Prescriptive Guidance for Agentic Frameworks"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock-agentcore/",
+            "label": "Go to guide",
+            "description": "Amazon Bedrock AgentCore Developer Guide"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/getting-started-starter-toolkit.html",
+            "label": "Go to Tutorial",
+            "description": "Getting Started with the Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/getting-started-custom.html",
+            "label": "Getting Started",
+            "description": "Getting started without the starter toolkit"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html",
+            "label": "read documentation",
+            "description": "Host agent or tools with Amazon Bedrock AgentCore Runtime"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-getting-started.html",
+            "label": "Go to guide",
+            "description": "Getting started with Amazon Bedrock AgentCore Memory"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html",
+            "label": "Documentation",
+            "description": "Amazon Bedrock AgentCore Observability documentation"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/strategy-operationalizing-agentic-ai/introduction.html",
+            "label": "Recommendations",
+            "description": "Operationalizing agentic AI on AWS"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-multitenant/introduction.html",
+            "label": "Multi-tenant",
+            "description": "Building multi-tenant architectures for agentic AI on AWS"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-serverless/introduction.html",
+            "label": "Serverless",
+            "description": "Building serverless architectures for agentic AI on AWS"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-patterns/introduction.html",
+            "label": "Guidance",
+            "description": "Agentic AI patterns and workflows on AWS"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/agent-to-agent-protocols.html",
+            "label": "AWS prescriptive guidance for A2A Protocol",
+            "description": "Agent-to-Agent protocols guidance"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/marketplace/latest/userguide/ai-agents-tools.html",
+            "label": "Listing AI Agents on AWS Marketplace",
+            "description": "AI Agents on AWS Marketplace"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html",
+            "label": "agentcore devguide",
+            "description": "Amazon Bedrock Agentcore developer guide"
+        },
+        {
+            "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html",
+            "label": "guardrails guide",
+            "description": "Amazon Bedrock Guardrails user guide"
+        },
+        {
+            "url": "https://strandsagents.com/latest/",
+            "label": "strand agents",
+            "description": "Strands Agents"
+        },
+        {
+            "url": "https://strandsagents.com/latest/documentation/docs/user-guide/concepts/multi-agent/agent-to-agent/",
+            "label": "Getting started with A2A on Strands SDK",
+            "description": "A2A on Strands SDK"
+        },
+        {
+            "url": "https://strandsagents.com/latest/documentation/docs/user-guide/safety-security/guardrails/",
+            "label": "strand guardrails",
+            "description": "Strands Agents - Guardrails"
+        }
+    ],
+    "GitHub & Samples": [
+        {
+            "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/tree/main?tab=readme-ov-file#Blogs",
+            "label": "Github Site",
+            "description": "Sample Agentic Frameworks on AWS"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations",
+            "label": "Github",
+            "description": "Agentic Framework integrations on Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/strands-agents",
+            "label": "Strands Agents",
+            "description": "Strands Agent on Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/adk",
+            "label": "ADK",
+            "description": "ADK (Agent Development Kit) Agent with Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/01-AgentCore-runtime/01-hosting-agent/04-crewai-with-bedrock-model",
+            "label": "CrewAI",
+            "description": "CrewAI on Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/autogen",
+            "label": "AutoGen",
+            "description": "AutoGen on Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/langgraph",
+            "label": "LangGraph",
+            "description": "LangGraph on Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://github.com/strands-agents/samples",
+            "label": "Samples",
+            "description": "GitHub Strands Agents samples"
+        },
+        {
+            "url": "https://github.com/strands-agents/sdk-python",
+            "label": "Python SDK",
+            "description": "GitHub Strands Agents Python SDK"
+        },
+        {
+            "url": "https://github.com/strands-agents/docs",
+            "label": "Docs",
+            "description": "GitHub Strands Agents docs"
+        },
+        {
+            "url": "https://github.com/strands-agents/tools",
+            "label": "Tools",
+            "description": "GitHub Strands Agents tools"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main",
+            "label": "Go to Github",
+            "description": "Amazon Bedrock AgentCore Samples Repository"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples",
+            "label": "Go to Github",
+            "description": "Amazon Bedrock AgentCore Samples"
+        },
+        {
+            "url": "https://github.com/aws/bedrock-agentcore-starter-toolkit",
+            "label": "Go to toolkit",
+            "description": "Bedrock AgentCore Starter Toolkit CLI"
+        },
+        {
+            "url": "https://aws.github.io/bedrock-agentcore-starter-toolkit/user-guide/runtime/quickstart.html",
+            "label": "Go to Aws Github",
+            "description": "QuickStart: Your First Agent in 5 Minutes"
+        },
+        {
+            "url": "https://aws.github.io/bedrock-agentcore-starter-toolkit/api-reference/memory.html",
+            "label": "Go to AWS GitHub",
+            "description": "AWS Github - Amazon Bedrock AgentCore Memory"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/02-AgentCore-gateway",
+            "label": "Amazon Bedrock AgentCore Gateway",
+            "description": "AgentCore Gateway samples"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/02-use-cases/healthcare-appointment-agent",
+            "label": "AWS reference architecture with AgentCore Gateway",
+            "description": "Healthcare appointment agent sample"
+        },
+        {
+            "url": "https://github.com/aws/bedrock-agentcore-starter-toolkit/tree/main/src/bedrock_agentcore_starter_toolkit/operations/gateway",
+            "label": "Amazon Bedrock AgentCore Starter Toolkit",
+            "description": "Gateway operations in starter toolkit"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/04-AgentCore-memory",
+            "label": "Go to Tutorial",
+            "description": "Amazon Bedrock AgentCore Memory tutorial"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/06-AgentCore-observability",
+            "label": "Go to Github",
+            "description": "AgentCore Observability samples"
+        },
+        {
+            "url": "https://github.com/strands-agents/samples/tree/main/05-agentic-rag",
+            "label": "Github",
+            "description": "Agentic RAG Implementation Samples"
+        },
+        {
+            "url": "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/03-graph-agent",
+            "label": "Graph Agent",
+            "description": "Graph agent sample"
+        },
+        {
+            "url": "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/02-swarm-agent",
+            "label": "Swarm Agent",
+            "description": "Swarm agent sample"
+        },
+        {
+            "url": "https://github.com/strands-agents/samples/tree/main/01-tutorials/02-multi-agent-systems/01-agent-as-tool",
+            "label": "Agent-as-tool",
+            "description": "Agent-as-tool sample"
+        },
+        {
+            "url": "https://github.com/strands-agents/samples/tree/main/02-samples",
+            "label": "Strands SDK",
+            "description": "Agentic Pattern Samples Repository"
+        },
+        {
+            "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/02-use-cases",
+            "label": "Bedrock AgentCore",
+            "description": "Bedrock AgentCore Agentic Patterns Repo"
+        },
+        {
+            "url": "https://github.com/aws-samples/amazon-bedrock-samples/tree/main/responsible_ai",
+            "label": "samples",
+            "description": "Responsible AI Samples"
+        },
+        {
+            "url": "https://github.com/strands-agents/samples/tree/main/03-integrations/Native-A2A-Support",
+            "label": "Building A2A agent with native support from Strands SDK",
+            "description": "A2A native support sample"
+        }
+    ],
+    "Blogs": [
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/enabling-customers-to-deliver-production-ready-ai-agents-at-scale/",
+            "label": "Go to blog",
+            "description": "Enabling customers to deliver production-ready AI agents at scale"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/move-your-ai-agents-from-proof-of-concept-to-production-with-amazon-bedrock-agentcore/",
+            "label": "Go to blog",
+            "description": "Move your AI agents from proof of concept to production"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-agentcore-gateway-transforming-enterprise-ai-agent-tool-development/",
+            "label": "AWS AI Blog",
+            "description": "Introducing Amazon Bedrock AgentCore Gateway"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/",
+            "label": "Go to blog",
+            "description": "Amazon Bedrock AgentCore Memory: Building context-aware agents"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/build-trustworthy-ai-agents-with-amazon-bedrock-agentcore-observability/",
+            "label": "Go to blog",
+            "description": "Build trustworthy AI agents with AgentCore Observability"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-agentcore-securely-deploy-and-operate-ai-agents-at-any-scale/",
+            "label": "Securely deploy and operate AI agents at any scale",
+            "description": "Introducing Amazon Bedrock AgentCore"
+        },
+        {
+            "url": "https://builder.aws.com/content/30YXzNzo7AKLBHMwfs1hI4Ckm6S/the-agentic-ai-revolution-transforming-enterprise-business-processes-with-aws-and-global-strategic-partners",
+            "label": "Blog",
+            "description": "Transforming Enterprise Business Processes with AWS"
+        },
+        {
+            "url": "https://www.aboutamazon.com/news/innovation-at-amazon/seller-assistant-agentic-ai",
+            "label": "Blog",
+            "description": "Amazon introduces agentic AI across the seller experience"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/build-agentic-workflows-with-openai-gpt-oss-on-amazon-sagemaker-ai-and-amazon-bedrock-agentcore/",
+            "label": "Blog",
+            "description": "Build Agentic Workflows with OpenAI GPT OSS on Amazon Bedrock AgentCore"
+        }
+    ],
+    "Protocols (MCP & A2A)": [
+        {
+            "url": "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-1-inter-agent-communication-on-mcp/",
+            "label": "Open Protocols for Agent Interoperability (MCP, A2A)",
+            "description": "Inter-agent communication on MCP"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/unlocking-the-power-of-model-context-protocol-mcp-on-aws/",
+            "label": "Unlocking the Power of Model Context Protocol (MCP) on AWS",
+            "description": "MCP on AWS"
+        },
+        {
+            "url": "https://builder.aws.com/content/2vPB0cvCY08EWYleQ8vcMCOvQVg/run-mcp-desktop-client-using-amazon-bedrock-for-agenticai",
+            "label": "Run MCP desktop client using Amazon Bedrock for AgenticAI",
+            "description": "MCP desktop client with Bedrock"
+        },
+        {
+            "url": "https://aws.amazon.com/solutions/guidance/deploying-model-context-protocol-servers-on-aws/",
+            "label": "AWS guide for deploying MCP servers",
+            "description": "Deploying MCP servers on AWS"
+        },
+        {
+            "url": "https://community.aws/content/2v8AETAkyvPp9RVKC4YChncaEbs/running-mcp-based-agents-clients-servers-on-aws",
+            "label": "Getting started with MCP agents on AWS",
+            "description": "MCP agents on AWS"
+        },
+        {
+            "url": "https://github.com/aws-samples/Sample-Model-Context-Protocol-Demos/tree/main/modules/spring-ai-mcp-inter-agent-ecs",
+            "label": "Sample code: MCP-enabled HR agent example",
+            "description": "MCP HR agent sample"
+        },
+        {
+            "url": "https://github.com/awslabs/mcp",
+            "label": "AWS-labs OSS MCP server projects",
+            "description": "AWS MCP server projects"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/machine-learning/harness-the-power-of-mcp-servers-with-amazon-bedrock-agents/",
+            "label": "Develop Bedrock Agents with MCP integration",
+            "description": "MCP integration with Bedrock Agents"
+        },
+        {
+            "url": "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-4-inter-agent-communication-on-a2a/",
+            "label": "Open Protocols for Agent Interoperability",
+            "description": "Inter-agent communication on A2A"
+        },
+        {
+            "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/blob/main/a2a-protocol/a2a-advisory-trading/docs/main/development_guide.md",
+            "label": "Development Guide",
+            "description": "A2A Advisory Trading development guide"
+        },
+        {
+            "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/blob/main/a2a-protocol/a2a-advisory-trading/docs/main/solution_deployment.md",
+            "label": "Solution Deployment Guide",
+            "description": "A2A Advisory Trading deployment guide"
+        },
+        {
+            "url": "https://dojo.ag-ui.com/langgraph-fastapi/feature/agentic_chat_reasoning",
+            "label": "AG-UI Dojo",
+            "description": "AG-UI Dojo"
+        },
+        {
+            "url": "https://github.com/ag-ui-protocol/ag-ui",
+            "label": "Official AG-UI Documentation",
+            "description": "AG-UI Protocol"
+        }
+    ],
+    "Workshops & Tutorials": [
+        {
+            "url": "https://catalog.us-east-1.prod.workshops.aws/workshops/fda82638-2464-49f9-b6af-0e72b157d1a9/en-US",
+            "label": "Building MCP-enabled Strands Agents on Bedrock",
+            "description": "MCP Strands Agents workshop"
+        },
+        {
+            "url": "https://catalog.us-east-1.prod.workshops.aws/workshops/015a2de4-9522-4532-b2eb-639280dc31d8/en-US",
+            "label": "Go to guide",
+            "description": "AgentCore Observability workshop"
+        }
+    ],
+    "Product Pages": [
+        {
+            "url": "https://aws.amazon.com/bedrock/agentcore/",
+            "label": "Go to webpage",
+            "description": "Amazon Bedrock AgentCore Overview"
+        },
+        {
+            "url": "https://aws.amazon.com/bedrock/agentcore/faqs/",
+            "label": "Go to FAQ",
+            "description": "Amazon Bedrock AgentCore FAQ"
+        },
+        {
+            "url": "https://aws.amazon.com/bedrock/guardrails/",
+            "label": "bedrock guardrails",
+            "description": "Amazon Bedrock Guardrails"
+        }
+    ],
+    "Security & Guardrails": [
+        {
+            "url": "https://aws.amazon.com/ai/generative-ai/security/",
+            "label": "AWS Site",
+            "description": "Securing AI"
+        },
+        {
+            "url": "https://aws.amazon.com/security/",
+            "label": "Webpage",
+            "description": "Cloud Security"
+        },
+        {
+            "url": "https://aws.amazon.com/trust-center/",
+            "label": "Trust center",
+            "description": "Trust Center"
+        }
+    ]
+}

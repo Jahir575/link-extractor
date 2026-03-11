@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://github.com/strands-agents/samples",
+    "label": "Samples",
+    "aria_label": "Samples (opens in a new tab)",
+    "description": "GitHub Strands Agents samples"
+  },
+  {
+    "url": "https://github.com/strands-agents/sdk-python",
+    "label": "Python SDK",
+    "aria_label": "Python SDK (opens in a new tab)",
+    "description": "GitHub Strands Agents Python SDK"
+  },
+  {
+    "url": "https://github.com/strands-agents/docs",
+    "label": "Docs",
+    "aria_label": "Docs (opens in a new tab)",
+    "description": "GitHub Strands Agents docs"
+  },
+  {
+    "url": "https://github.com/strands-agents/tools",
+    "label": "Tools",
+    "aria_label": "Tools (opens in a new tab)",
+    "description": "GitHub Strands Agents tools"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://aws.github.io/bedrock-agentcore-starter-toolkit/user-guide/runtime/quickstart.html",
+    "label": "Go to Aws Github",
+    "aria_label": "Go to Aws Github (opens in a new tab)",
+    "description": "QuickStart: Your First Agent in 5 Minutes!Get your AI agent running on Amazon Bedrock AgentCore following the steps."
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples",
+    "label": "Go to Github",
+    "aria_label": "Go to Github (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore SamplesDeploy and operate AI agents securely at scale - using any framework and model."
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/move-your-ai-agents-from-proof-of-concept-to-production-with-amazon-bedrock-agentcore/",
+    "label": "Go to blog",
+    "aria_label": "Go to blog (opens in a new tab)",
+    "description": "Move your AI agents from proof of concept to production with Amazon Bedrock AgentCoreAmazon Bedrock AgentCore helps transform AI agent prototypes into production systems with memory, security, tools, and observability features."
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/getting-started-starter-toolkit.html",
+    "label": "Go to Tutorial",
+    "aria_label": "Go to Tutorial (opens in a new tab)",
+    "description": "Getting Started with the Amazon Bedrock AgentCoreA tutorial showing you how to use the Amazon Bedrock AgentCore starter toolkit to deploy an agent to an AgentCore Runtime."
+  },
+  {
+    "url": "https://github.com/aws/bedrock-agentcore-starter-toolkit",
+    "label": "Go to toolkit",
+    "aria_label": "Go to toolkit (opens in a new tab)",
+    "description": "Starter ToolkitThe Bedrock AgentCore Starter Toolkit is a Command Line Interface (CLI) toolkit that helps developers deploy AI agents to AgentCore Runtime."
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/getting-started-custom.html",
+    "label": "Getting Started",
+    "aria_label": "Getting Started (opens in a new tab)",
+    "description": "Getting started without the starter toolkitYou can create a AgentCore Runtime agent without the starter toolkit. Instead you can use a combination of command line tools to configure and deploy your agent to an AgentCore Runtime."
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=wizEw5a4gvM",
+    "label": "Go to YouTube",
+    "aria_label": "Go to YouTube (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore Runtime DemoAmazon Bedrock AgentCore Deep dive series: Runtime | AWS Show and Tell"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html",
+    "label": "read documentation",
+    "aria_label": "read documentation (opens in a new tab)",
+    "description": "Host agent or tools with Amazon Bedrock AgentCore RuntimeDeep dive on Amazon Bedrock AgentCore Runtime"
+  }
+]

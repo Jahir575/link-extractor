@@ -1,0 +1,50 @@
+[
+  {
+    "url": "https://strandsagents.com/latest/",
+    "label": "strand agents",
+    "aria_label": "strand agents (opens in a new tab)",
+    "description": "Strands Agents"
+  },
+  {
+    "url": "https://strandsagents.com/latest/documentation/docs/user-guide/safety-security/guardrails/",
+    "label": "strand guardrails",
+    "aria_label": "strand guardrails (opens in a new tab)",
+    "description": "Strands Agents - Guardrails"
+  },
+  {
+    "url": "https://aws.amazon.com/bedrock/guardrails/",
+    "label": "bedrock guardrails",
+    "aria_label": "bedrock guardrails (opens in a new tab)",
+    "description": "Amazon Bedrock Guardrails"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html",
+    "label": "guardrails guide",
+    "aria_label": "guardrails guide (opens in a new tab)",
+    "description": "Amazon Bedrock Guardrails user guide"
+  },
+  {
+    "url": "https://github.com/aws-samples/amazon-bedrock-samples/tree/main/responsible_ai",
+    "label": "samples",
+    "aria_label": "samples (opens in a new tab)",
+    "description": "Responsible AI Samples"
+  },
+  {
+    "url": "https://aws.amazon.com/bedrock/agentcore/",
+    "label": "agentcore",
+    "aria_label": "agentcore (opens in a new tab)",
+    "description": "Amazon Bedrock Agentcore"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html",
+    "label": "agentcore devguide",
+    "aria_label": "agentcore devguide (opens in a new tab)",
+    "description": "Amazon Bedrock Agentcore developer guide"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html",
+    "label": "bedrock runtime",
+    "aria_label": "bedrock runtime (opens in a new tab)",
+    "description": "Amazon Bedrock Runtime"
+  }
+]

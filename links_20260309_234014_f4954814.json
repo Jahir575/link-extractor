@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://aws.amazon.com/bedrock/agentcore/",
+    "label": "Go to webpage",
+    "aria_label": "Go to webpage (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore Overview"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main",
+    "label": "Go to Github",
+    "aria_label": "Go to Github (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore Samples Repository"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/",
+    "label": "Go to guide",
+    "aria_label": "Go to guide (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore Developer Guide"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/enabling-customers-to-deliver-production-ready-ai-agents-at-scale/",
+    "label": "Go to blog",
+    "aria_label": "Go to blog (opens in a new tab)",
+    "description": "Blog article: Enabling customers to deliver production-ready AI agents at scale"
+  },
+  {
+    "url": "https://aws.amazon.com/bedrock/agentcore/faqs/",
+    "label": "Go to FAQ",
+    "aria_label": "Go to FAQ (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore FAQ"
+  }
+]

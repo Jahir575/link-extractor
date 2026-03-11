@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/observability.html",
+    "label": "Documentation",
+    "aria_label": "Documentation (opens in a new tab)",
+    "description": "DocumentationAmazon Bedrock AgentCore Observability documentation provides comprehensive coverage of APIs, configuration, and troubleshooting."
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/06-AgentCore-observability",
+    "label": "Go to Github",
+    "aria_label": "Go to Github (opens in a new tab)",
+    "description": "Code and samplesWe've published the demo architecture from today on GitHub—complete working example of a 2-agent system with gateway, memory, and full instrumentation. Great reference implementation. We've also published example integrations with third-party tools like Weights & Biases Weave."
+  },
+  {
+    "url": "https://catalog.us-east-1.prod.workshops.aws/workshops/015a2de4-9522-4532-b2eb-639280dc31d8/en-US",
+    "label": "Go to guide",
+    "aria_label": "Go to guide (opens in a new tab)",
+    "description": "WorkshopsSelf-paced, hands-on learning available"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-trustworthy-ai-agents-with-amazon-bedrock-agentcore-observability/",
+    "label": "Go to blog",
+    "aria_label": "Go to blog (opens in a new tab)",
+    "description": "Blog articlesWe're publishing regularly on observability topics—multi-agent monitoring, cost optimization, integration patterns."
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/frameworks.html",
+    "label": "Frameworks",
+    "aria_label": "Frameworks (opens in a new tab)",
+    "description": "Agentic AI frameworks"
+  },
+  {
+    "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/tree/main?tab=readme-ov-file#Blogs",
+    "label": "Github Site",
+    "aria_label": "Github Site (opens in a new tab)",
+    "description": "Sample Agentic Frameworks on AWS"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations",
+    "label": "Github",
+    "aria_label": "Github (opens in a new tab)",
+    "description": "Agentic Framework integrations on Amazon Bedrock AgentCore"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/strands-agents",
+    "label": "Strands Agents",
+    "aria_label": "Strands Agents (opens in a new tab)",
+    "description": "Strands Agent on Amazon Bedrock AgentCore"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/adk",
+    "label": "ADK",
+    "aria_label": "ADK (opens in a new tab)",
+    "description": "ADK (Agent Development Kit) Agent with Amazon Bedrock AgentCore Integration"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/01-AgentCore-runtime/01-hosting-agent/04-crewai-with-bedrock-model",
+    "label": "CrewAI",
+    "aria_label": "CrewAI (opens in a new tab)",
+    "description": "CrewAI on Amazon Bedrock AgentCore"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/autogen",
+    "label": "AutoGen",
+    "aria_label": "AutoGen (opens in a new tab)",
+    "description": "AutoGen on Amazon Bedrock AgentCore"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/03-integrations/agentic-frameworks/langgraph",
+    "label": "LangGraph",
+    "aria_label": "LangGraph (opens in a new tab)",
+    "description": "LangGraph on Amazon Bedrock AgentCore"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/introduction.html",
+    "label": "Documentation",
+    "aria_label": "Documentation (opens in a new tab)",
+    "description": "AWS Prescriptive Guidance for Agentic Frameworks"
+  }
+]

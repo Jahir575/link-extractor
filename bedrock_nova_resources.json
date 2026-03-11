@@ -1,0 +1,86 @@
+[
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/evaluate-models-or-rag-systems-using-amazon-bedrock-evaluations-now-generally-available/",
+    "label": "bedrock evaluation",
+    "aria_label": "bedrock evaluation",
+    "description": "Evaluate models or RAG systems using Amazon Bedrock Evaluations"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/llm-as-a-judge-on-amazon-bedrock-model-evaluation/",
+    "label": "llm as a judge",
+    "aria_label": "llm as a judge",
+    "description": "LLM-as-a-judge on Amazon Bedrock Model Evaluation"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/use-custom-metrics-to-evaluate-your-generative-ai-application-with-amazon-bedrock/",
+    "label": "custom metrics",
+    "aria_label": "custom metrics",
+    "description": "Use custom metrics to evaluate your generative AI application with Amazon Bedrock"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/fine-tune-anthropics-claude-3-haiku-in-amazon-bedrock-to-boost-model-accuracy-and-quality/",
+    "label": "claude3 haiku",
+    "aria_label": "claude3 haiku",
+    "description": "Fine-tune Anthropic's Claude 3 Haiku in Amazon Bedrock to boost model accuracy and quality"
+  },
+  {
+    "url": "https://aws.amazon.com/awstv/watch/92a3fa57f74/",
+    "label": "AWSTV",
+    "aria_label": "AWSTV",
+    "description": "Fine-Tuning Models in Amazon Bedrock (Video/Demo)"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/a-guide-to-amazon-bedrock-model-distillation-preview/",
+    "label": "distillation",
+    "aria_label": "distillation",
+    "description": "A guide to Amazon Bedrock Model Distillation"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/import-a-question-answering-fine-tuned-model-into-amazon-bedrock-as-a-custom-model/",
+    "label": "qa fine-tuned",
+    "aria_label": "qa fine-tuned",
+    "description": "Import a question answering fine-tuned model into Amazon Bedrock as a custom model"
+  },
+  {
+    "url": "https://docs.aws.amazon.com/nova/latest/userguide/what-is-nova.html",
+    "label": "user guide",
+    "aria_label": "user guide",
+    "description": "Amazon Nova official user guide"
+  },
+  {
+    "url": "https://github.com/aws-samples/amazon-nova-samples",
+    "label": "nova samples",
+    "aria_label": "nova samples",
+    "description": "Amazon Nova GitHub repo"
+  },
+  {
+    "url": "https://partnercentral.awspartner.com/partnercentral2/s/login?ec=302&startURL=%2Fpartnercentral2%2Fs%2Farticle%3Fcategory%3DGenerative_AI_Center_of_Excellence%26article%3DAmazon-Nova",
+    "label": "asset packs",
+    "aria_label": "asset packs",
+    "description": "Amazon Nova asset packs"
+  },
+  {
+    "url": "https://github.com/aws/nova-act",
+    "label": "nova act",
+    "aria_label": "nova act",
+    "description": "Amazon Nova Act SDK"
+  },
+  {
+    "url": "https://catalog.us-east-1.prod.workshops.aws/workshops/012d9c20-25dc-4065-bdb6-50e935e8bd9f/en-US",
+    "label": "multimodal",
+    "aria_label": "multimodal",
+    "description": "Amazon Nova Multimodal understanding models workshop"
+  },
+  {
+    "url": "https://catalog.us-east-1.prod.workshops.aws/workshops/66a0984a-ad2b-481f-a1cf-e7896ea9595b/en-US",
+    "label": "nova canvas",
+    "aria_label": "nova canvas",
+    "description": "Mastering Nova Canvas and Nova Reel for creative success workshop"
+  },
+  {
+    "url": "https://catalog.us-east-1.prod.workshops.aws/workshops/5238419f-1337-4e0f-8cd7-02239486c40d/en-US",
+    "label": "nova sonic",
+    "aria_label": "nova sonic",
+    "description": "Amazon Nova Sonic (speech-to-speech) Workshop"
+  }
+]

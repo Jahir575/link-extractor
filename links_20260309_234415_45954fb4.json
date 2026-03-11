@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-getting-started.html",
+    "label": "Go to guide",
+    "aria_label": "Go to guide (opens in a new tab)",
+    "description": "Getting started with Amazon Bedrock AgentCore Memory - Developer Guide"
+  },
+  {
+    "url": "https://aws.github.io/bedrock-agentcore-starter-toolkit/api-reference/memory.html",
+    "label": "Go to AWS GitHub",
+    "aria_label": "Go to AWS GitHub (opens in a new tab)",
+    "description": "AWS Github - Amazon Bedrock AgentCore Memory"
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-memory-building-context-aware-agents/",
+    "label": "Go to blog",
+    "aria_label": "Go to blog (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore Memory: Building context-aware agents"
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/04-AgentCore-memory",
+    "label": "Go to Tutorial",
+    "aria_label": "Go to Tutorial (opens in a new tab)",
+    "description": "Amazon Bedrock AgentCore Memory tutorial"
+  }
+]

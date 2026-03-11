@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://aws.amazon.com/ai/generative-ai/security/",
+    "label": "AWS Site",
+    "aria_label": "AWS Site (opens in a new tab)",
+    "description": "Securing AI"
+  },
+  {
+    "url": "https://aws.amazon.com/security/",
+    "label": "Webpage",
+    "aria_label": "Webpage (opens in a new tab)",
+    "description": "Cloud Security"
+  },
+  {
+    "url": "https://aws.amazon.com/trust-center/",
+    "label": "Trust center",
+    "aria_label": "Trust center (opens in a new tab)",
+    "description": "Trust Center"
+  }
+]

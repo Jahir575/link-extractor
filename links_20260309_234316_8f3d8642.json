@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/01-tutorials/02-AgentCore-gateway",
+    "label": "Amazon Bedrock AgentCore Gateway(opens in a new tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/main/02-use-cases/healthcare-appointment-agent",
+    "label": "AWS reference architecture with AgentCore Gateway sample code(opens in a new tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://github.com/aws/bedrock-agentcore-starter-toolkit/tree/main/src/bedrock_agentcore_starter_toolkit/operations/gateway",
+    "label": "Amazon Bedrock AgentCore Starter Toolkit(opens in a new tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-amazon-bedrock-agentcore-gateway-transforming-enterprise-ai-agent-tool-development/",
+    "label": "AWS AI Blog(opens in a new tab)",
+    "aria_label": "",
+    "description": ""
+  }
+]

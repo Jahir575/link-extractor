@@ -1,0 +1,116 @@
+[
+  {
+    "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/blob/main/a2a-protocol/a2a-advisory-trading/docs/main/development_guide.md",
+    "label": "Development\n                                                        Guide(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://github.com/aws-samples/sample-agentic-frameworks-on-aws/blob/main/a2a-protocol/a2a-advisory-trading/docs/main/solution_deployment.md",
+    "label": "Solution\n                                                        Deployment Guide(opens in a\n                                                            new tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-1-inter-agent-communication-on-mcp/",
+    "label": "Open\n                                                        Protocols for Agent Interoperability (MCP, A2A)(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/unlocking-the-power-of-model-context-protocol-mcp-on-aws/",
+    "label": "Unlocking\n                                                            the Power of Model Context Protocol (MCP) on AWS(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://builder.aws.com/content/2vPB0cvCY08EWYleQ8vcMCOvQVg/run-mcp-desktop-client-using-amazon-bedrock-for-agenticai",
+    "label": "Run\n                                                        MCP desktop client using Amazon Bedrock for AgenticAI(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://aws.amazon.com/solutions/guidance/deploying-model-context-protocol-servers-on-aws/",
+    "label": "AWS\n                                                        guide for deploying MCP servers(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://community.aws/content/2v8AETAkyvPp9RVKC4YChncaEbs/running-mcp-based-agents-clients-servers-on-aws",
+    "label": "Getting\n                                                        started with MCP agents on AWS(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://catalog.us-east-1.prod.workshops.aws/workshops/fda82638-2464-49f9-b6af-0e72b157d1a9/en-US",
+    "label": "Building\n                                                        MCP-enabled Strands Agents on Bedrock(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://github.com/aws-samples/Sample-Model-Context-Protocol-Demos/tree/main/modules/spring-ai-mcp-inter-agent-ecs",
+    "label": "Sample\n                                                        code: MCP-enabled HR agent example(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://github.com/awslabs/mcp",
+    "label": "AWS-labs OSS MCP server\n                                                        projects(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/machine-learning/harness-the-power-of-mcp-servers-with-amazon-bedrock-agents/",
+    "label": "Develop\n                                                        Bedrock Agents with MCP integration(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://docs.aws.amazon.com/marketplace/latest/userguide/ai-agents-tools.html",
+    "label": "Listing\n                                                        AI Agents on AWS Marketplace(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/opensource/open-protocols-for-agent-interoperability-part-4-inter-agent-communication-on-a2a/",
+    "label": "Open\n                                                        Protocols for Agent Interoperability(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-agentcore-securely-deploy-and-operate-ai-agents-at-any-scale/",
+    "label": "Securely\n                                                        deploy and operate AI agents at any scale(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://docs.aws.amazon.com/prescriptive-guidance/latest/agentic-ai-frameworks/agent-to-agent-protocols.html",
+    "label": "AWS\n                                                        prescriptive guidance for A2A Protocol(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://strandsagents.com/latest/documentation/docs/user-guide/concepts/multi-agent/agent-to-agent/",
+    "label": "Getting\n                                                        started with A2A on Strands SDK(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://github.com/strands-agents/samples/tree/main/03-integrations/Native-A2A-Support",
+    "label": "Building\n                                                        A2A agent with native support from Strands SDK(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://dojo.ag-ui.com/langgraph-fastapi/feature/agentic_chat_reasoning",
+    "label": "AG-UI\n                                                        Dojo(opens in a new\n                                                            tab)",
+    "aria_label": "",
+    "description": ""
+  },
+  {
+    "url": "https://github.com/ag-ui-protocol/ag-ui",
+    "label": "Official AG-UI\n                                                        Documentation(opens in a\n                                                            new tab)",
+    "aria_label": "",
+    "description": ""
+  }
+]
